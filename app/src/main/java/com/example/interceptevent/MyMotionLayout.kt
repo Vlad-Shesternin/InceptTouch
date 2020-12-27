@@ -21,8 +21,7 @@ class MyMotionLayout @JvmOverloads constructor(
             action == MotionEvent.ACTION_DOWN -> {
                 oldX = ev.x
             }
-
-            action == MotionEvent.ACTION_MOVE && ev.x > oldX + 50 -> {
+            action == MotionEvent.ACTION_MOVE && ev.x > oldX + 50 || ev.x < oldX - 50 -> {
                 return true
             }
         }
